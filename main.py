@@ -4,7 +4,7 @@ import requests
 
 @loger(log_path="logs\logs.log")
 def get_weather(city: str):
-    api = "a9e7fe609b9eb44ad04ff559c707b0e3"
+    api = ""
     params = {"q": city, "type": "like", "units": "metric", "lang": "ru", "APPID": api}
     r = requests.get("http://api.openweathermap.org/data/2.5/find", params=params)
     data = r.json()
