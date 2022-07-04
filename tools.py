@@ -13,6 +13,8 @@ def loger(log_path):
             with open(log_path, "a", encoding="utf-8") as f:
                 for key, val in log.items():
                     f.write("{}:{}\n".format(key, val))
-            return new_function
+            return result
+
         return new_function
+
     return _loger
